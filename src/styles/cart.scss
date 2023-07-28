@@ -1,0 +1,84 @@
+@import "colors";
+.cart {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  > main {
+    padding: 2rem;
+    overflow-y: auto;
+    > h1 {
+      color: $tertiary;
+      font: 400 2rem "Inter";
+    }
+  }
+  > aside {
+    border-radius: 100px 0 0 100px;
+    background-color: $primary;
+    color: $tertiary;
+    height: 100%;
+    width: 100%;
+    box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.182);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      margin: 1rem;
+      font: 100 1.8rem "Inter";
+      letter-spacing: 2px;
+      &:last-of-type {
+        font-weight: 600;
+      }
+    }
+  }
+}
+.cartItem {
+  background-color: $tertiary;
+  width: 100%;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 1fr;
+  align-items: center;
+  > img {
+    width: 100%;
+    height: 12rem;
+    object-fit: contain;
+  }
+  > article {
+    display: flex;
+    justify-content: space-around;
+  }
+  div {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    button {
+      width: 30px;
+      height: 30px;
+      border: none;
+      background-color: $primary;
+      color: $tertiary;
+      cursor: pointer;
+      border-radius: 6px;
+      &:hover {
+        background-color: $primarydark;
+      }
+    }
+    > p {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+    }
+  }
+  > svg {
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: inline-block;
+    margin: auto;
+    &:hover {
+      color: $secondary;
+    }
+  }
+}
